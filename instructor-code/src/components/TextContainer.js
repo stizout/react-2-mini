@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 export default class TextContainer extends Component {
   constructor() {
     super()
-    this.updateText = this.updateText.bind(this)
     this.state = {
       text: ''
     }
+    this.updateText = this.updateText.bind(this);
   }
 
   updateText(e) {
@@ -21,8 +21,8 @@ export default class TextContainer extends Component {
         <textarea 
           style={{
             color: this.props.fontColor,
+            fontSize: this.props.fontSize,
             fontFamily: this.props.fontFamily,
-            fontSize: this.props.fontSize
           }}
           onChange={this.updateText}
           value={this.state.text} 
@@ -34,7 +34,3 @@ export default class TextContainer extends Component {
     )
   }
 }
-
-
-
-

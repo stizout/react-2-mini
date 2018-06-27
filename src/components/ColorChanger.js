@@ -1,11 +1,13 @@
 import React from 'react';
 
-export default function ColorChanger() {
+ const ColorChanger = (props) => {
   return (
-    <select className="dropDownContainer">
+    <select className="dropDownContainer" value={props.fontColor} onChange={(e) => props.updateColor(e.target.value)} disabled={props.allowEdit === false}>
       <option value="black"> Black </option>
       <option value="blue"> Blue </option>
       <option value="green"> Green </option>
     </select>
   )
 }
+
+export default ColorChanger
